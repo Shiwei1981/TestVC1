@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}注册 - 网页算命{% endblock %}
+{% block content %}
+<div class="auth-card">
+    <h2>注册</h2>
+    <form method="POST" action="{{ url_for('register') }}">
+        <input type="text" name="username" placeholder="用户名" required autofocus>
+        <input type="password" name="password" placeholder="密码" required>
+        <button type="submit">注册</button>
+    </form>
+    <p class="hint">已有账号？<a href="{{ url_for('login') }}">去登录</a></p>
+</div>
+{% endblock %}

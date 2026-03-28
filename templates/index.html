@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}起卦 - 网页算命{% endblock %}
+{% block content %}
+<section class="divine-section">
+    <h2>🔮 请输入您的问题</h2>
+    <div class="divine-form">
+        <textarea id="question" rows="3" placeholder="请描述您想占卜的问题…"></textarea>
+        <input type="text" id="birth_info" placeholder="出生信息（可选，如：1990年3月15日 午时）">
+        <button id="btn-divine" onclick="doDivine()">起卦</button>
+    </div>
+    <div id="result" class="result-box" style="display:none;">
+        <h3>占卜结果</h3>
+        <div id="result-text"></div>
+    </div>
+</section>
+
+<section class="history-section">
+    <h2>📜 历史记录（最近 30 条）</h2>
+    {% if history %}
+    <div class="history-list" id="history-list">
+        {% for row in history %}
+        <div class="history-item">
+            <div class="history-meta">{{ row['created_at'] }}</div>
+            <div class="history-q"><strong>问：</strong>{{ row['question'] }}</div>
+            <div class="history-a"><strong>答：</strong>{{ row['answer'] }}</div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p class="empty" id="empty-hint">暂无记录，快去起一卦吧！</p>
+    {% endif %}
+</section>
+{% endblock %}

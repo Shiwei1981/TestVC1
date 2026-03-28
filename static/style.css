@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #e0d6c8;
+    min-height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+nav .brand {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #f5c842;
+    text-decoration: none;
+}
+
+.nav-right a,
+.nav-right span {
+    margin-left: 16px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.nav-right a:hover {
+    color: #f5c842;
+}
+
+main {
+    max-width: 720px;
+    margin: 30px auto;
+    padding: 0 16px;
+}
+
+/* Flash messages */
+.flash {
+    padding: 10px 16px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.flash.success {
+    background: #1b5e20;
+}
+
+.flash.danger {
+    background: #b71c1c;
+}
+
+/* Auth card */
+.auth-card {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 380px;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.auth-card h2 {
+    color: #f5c842;
+    margin-bottom: 24px;
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background: #1a1a2e;
+    color: #eee;
+    font-size: 1rem;
+}
+
+.auth-card button {
+    width: 100%;
+    padding: 12px;
+    background: #f5c842;
+    color: #1a1a2e;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.auth-card button:hover {
+    background: #e6b82e;
+}
+
+.hint {
+    margin-top: 16px;
+    font-size: 0.9rem;
+}
+
+.hint a {
+    color: #f5c842;
+}
+
+/* Divine section */
+.divine-section {
+    margin-bottom: 40px;
+}
+
+.divine-section h2 {
+    color: #f5c842;
+    margin-bottom: 16px;
+}
+
+.divine-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background: #1a1a2e;
+    color: #eee;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.divine-form input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 10px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background: #1a1a2e;
+    color: #eee;
+    font-size: 0.95rem;
+}
+
+.divine-form button {
+    margin-top: 12px;
+    padding: 12px 36px;
+    background: #f5c842;
+    color: #1a1a2e;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.divine-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.divine-form button:hover:not(:disabled) {
+    background: #e6b82e;
+}
+
+/* Result box */
+.result-box {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(245, 200, 66, 0.08);
+    border-left: 4px solid #f5c842;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    line-height: 1.7;
+}
+
+.result-box h3 {
+    color: #f5c842;
+    margin-bottom: 10px;
+}
+
+/* History */
+.history-section h2 {
+    color: #f5c842;
+    margin-bottom: 12px;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.history-item {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.history-meta {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 6px;
+}
+
+.history-q {
+    margin-bottom: 6px;
+}
+
+.history-a {
+    white-space: pre-wrap;
+    line-height: 1.6;
+}
+
+.empty {
+    color: #777;
+}
